@@ -16,9 +16,9 @@ LESS
 
 ## Development Process
 1. Ensure to understand the challenge and wireframe creation
-Desktop
+###Desktop
 ![Desktop Wireframe](https://giocodes.github.io/user-directory/screenshots/wireframe-desktop.jpg "Desktop Wireframe")
-Mobile
+###Mobile
 ![Mobile Wireframe](https://giocodes.github.io/user-directory/screenshots/wireframe-mobile.jpg "Mobile Wireframe")
 
 2. Review data source (JSON) and analyze how to integrate
@@ -31,7 +31,7 @@ Mobile
 [https://giocodes.github.io/user-directory/](https://giocodes.github.io/user-directory/)
 
 ## Screenshots
-Desktop
+###Desktop
 ![Desktop](https://giocodes.github.io/user-directory/screenshots/desktop.jpg "Desktop Wireframe")
-Mobile
+###Mobile
 ![Mobile](https://giocodes.github.io/user-directory/screenshots/mobile.jpg "Mobile")
