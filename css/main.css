@@ -48,6 +48,7 @@ input:focus {
 }
 .card {
   height: 280px;
+  background-color: rgba(128, 128, 128, 0.1);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50%;

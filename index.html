@@ -36,7 +36,7 @@
     <!-- Sets the GRID for the cards -->
     <div data-ng-repeat="user in allUsers | filter: userSearch" class="col-xs-12 col-sm-6 col-lg-4">
       <!-- CARD class holds the toggle feature and the profile photo -->
-      <div class="card" data-ng-click="toggle()" style="background-image: url('http://i.pravatar.cc/500?u={{user.email}}')">
+      <div class="card" data-ng-click="toggle()" style="background-image: url('profile-pics/p-{{user.id}}.jpg')">
         <!-- INFO class allows the overflow and animation effect -->
         <div class="{{user.expand ? 'info show-details' : 'info show-photo' }}">
           <!-- SHOW icon if phone number exists -->
