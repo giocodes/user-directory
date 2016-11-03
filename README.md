@@ -17,9 +17,9 @@ LESS
 ## Development Process
 1. Ensure to understand the challenge and wireframe creation
 Desktop
-![alt text](https://placem.at/places?h=300 =250x "Desktop Wireframe")
+![alt text](https://giocodes.github.io/user-directory/wireframes/desktop.jpg "Desktop Wireframe")
 Mobile
-![alt text](https://placem.at/places?h=300 =250x  "Mobile Wireframe")
+![alt text](https://giocodes.github.io/user-directory/wireframes/mobile.jpg "Mobile Wireframe")
 
 2. Review data source (JSON) and analyze how to integrate
 3. Decided to use Angular's $http service to load the JSON

@@ -9,7 +9,7 @@ angular.module('udAPP', [])
             }
         }
         // Fetching the data from the json file
-        $http.get('http://sigr.online/users.json')
+        $http.get('https://giocodes.github.io/user-directory/users.json')
             .then(function(res) {
                 $scope.allUsers = res.data;
             });
