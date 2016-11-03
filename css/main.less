@@ -1,0 +1,139 @@
+// Theme
+@import "themes.less";
+// Base Layout
+html,
+body,
+{
+    min-height: 100%;
+}
+
+body {
+    color: @main-text;
+    background-color: @background-light;
+}
+
+a {
+    color: @link-color;
+}
+
+a:hover {
+    color: @link-color-hover;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+}
+main {
+    min-height: 80vh;
+}
+
+// Fixed Navbar on Tablet and Mobile
+@media (min-width: 768px) {
+    .navbar {
+        position: fixed;
+        top: 0;
+        z-index: 1;
+    }
+    body {
+        padding-top: 5rem;
+    }
+}
+
+.navbar {
+    background-color: @background-light;
+    border-radius: 0;
+    border-bottom: 1px solid #ccc;
+}
+
+input {
+    float: right;
+    background-color: @main-transparency;
+    height: 3em;
+    width: 100%;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+input:focus {
+    border-color: @link-color;
+    outline: none !important;
+    box-shadow: 0 0 10px #719ECE;
+}
+
+// User Cards
+.card {
+    height: 280px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    margin: 10px 5px;
+    overflow: hidden;
+}
+
+.card:hover {
+    border-color: @link-color-hover;
+}
+
+.info {
+    padding: 10px 10px;
+    line-height: 1em;
+}
+
+.has-phone {
+    float: right;
+    height: 30px;
+}
+
+
+.contact {
+    &-name {
+        font-size: 150%;
+        line-height: 1em;
+    }
+    &-email {
+        font-size: 95%;
+        padding-bottom: 20px;
+    }
+    &-address {
+        font-size: 90%;
+    }
+}
+
+.icon {
+    height: 15px;
+    margin-right: 5px;
+}
+
+// Card details transition
+.show-photo {
+    margin-top: 185px;
+    background-color: rgba(55, 58, 60, 0.1);
+    color: white;
+    -webkit-transition: color 1s 1s, background-color 1s 1s, margin-top 1s, background-image 2s;
+    transition: color 1s 1s, background-color 1s 1s, margin-top 1s, background-image 2s;
+}
+
+.show-details {
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    background-image: url(https://d30y9cdsu7xlg0.cloudfront.net/png/648377-200.png);
+    -webkit-transition: background-color 1s, margin-top 1s 1s, background-image 2s;
+    transition: background-color 1s, margin-top 1s 1s, background-image 2s;
+    background-repeat: no-repeat;
+    background-position: 97% 1%;
+    background-size: 5%;
+}
+
+// Footer
+
+footer {
+    background-color: @background-dark;
+    text-align: center;
+    margin-top: 2em;
+    p {
+        padding-top: .5em;
+    }
+    a {
+        color: @background-light;
+    }
+}

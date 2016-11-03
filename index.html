@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>User Directory</title>
+  <meta name="author" content="Sergio Gomez">
+  <meta name="description" content="Front End Challenge">
+  <link rel="icon" type="image/png" href="img/giocodes.png" />
+  <style>
+  @import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+  </style>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<!-- using 'data' on Angular directives to comply W3C validation -->
+
+<body data-ng-app="udAPP">
+  <nav class="navbar col-xs-12">
+    <div class="col-sm-8">
+      <h1>User Directory</h1>
+    </div>
+    <div class="col-sm-4">
+      <input type="text" data-ng-model="userSearch" placeholder="Search">
+    </div>
+  </nav>
+  <main data-ng-controller="UserCtrl" class="container">
+    <div class="col-xs-12">
+      <!-- Toggle message if there are no search results -->
+      <h5 data-ng-hide="!(allUsers | filter: userSearch).length">Click a card to see details</h5>
+    </div>
+    <h5 data-ng-show="!(allUsers | filter: userSearch).length"> No results. <br> Please try a different search</h5>
+    <!-- Sets the GRID for the cards -->
+    <div data-ng-repeat="user in allUsers | filter: userSearch" class="col-xs-12 col-sm-6 col-lg-4">
+      <!-- CARD class holds the toggle feature and the profile photo -->
+      <div class="card" data-ng-click="toggle()" style="background-image: url('http://i.pravatar.cc/500?u={{user.email}}')">
+        <!-- INFO class allows the overflow and animation effect -->
+        <div class="{{user.expand ? 'info show-details' : 'info show-photo' }}">
+          <!-- SHOW icon if phone number exists -->
+          <img class="has-phone" src="img/has-phone.svg" data-ng-show="user.phone !== '' && !user.expand" alt="">
+          <p class="contact-name"><strong>{{user.name | limitTo: 20}}</strong></p>
+          <p class="contact-email">{{user.email}}</p>
+          <p><img class="icon" src="img/profile.svg" alt="">{{user.username}}</p>
+          <p><img class="icon" src="img/geo.svg" alt="">{{user.address.street}} {{user.address.suite}} </p>
+          <p class="contact-address">{{user.address.city}} {{user.address.zipcode}}
+          </p>
+          <!-- SHOW this p only if phone number exists -->
+          <p data-ng-show="user.phone !== ''"><img class="icon" src="img/phone.svg" alt="">{{user.phone}}</p>
+          <a href="http://{{user.website}}" target="blank">
+            <p><img class="icon" src="img/web.svg" alt="">{{user.website == "" ? 'N/A' : user.website}}</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="row">
+    <p>Source on <a href="https://github.com/giocodes">GitHub</a> | <a href="#">Back to top</a></p>
+  </footer>
+  <!-- /container's end -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

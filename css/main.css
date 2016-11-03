@@ -1,0 +1,110 @@
+html,
+body {
+  min-height: 100%;
+}
+body {
+  color: #333333;
+  background-color: #F2F2F2;
+}
+a {
+  color: #5EA000;
+}
+a:hover {
+  color: #FF681D;
+}
+h1 {
+  font-family: 'Playfair Display', serif;
+}
+main {
+  min-height: 80vh;
+}
+@media (min-width: 768px) {
+  .navbar {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+  }
+  body {
+    padding-top: 5rem;
+  }
+}
+.navbar {
+  background-color: #F2F2F2;
+  border-radius: 0;
+  border-bottom: 1px solid #ccc;
+}
+input {
+  float: right;
+  background-color: rgba(128, 128, 128, 0.1);
+  height: 3em;
+  width: 100%;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+input:focus {
+  border-color: #5EA000;
+  outline: none !important;
+  box-shadow: 0 0 10px #719ECE;
+}
+.card {
+  height: 280px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+  margin: 10px 5px;
+  overflow: hidden;
+}
+.card:hover {
+  border-color: #FF681D;
+}
+.info {
+  padding: 10px 10px;
+  line-height: 1em;
+}
+.has-phone {
+  float: right;
+  height: 30px;
+}
+.contact-name {
+  font-size: 150%;
+  line-height: 1em;
+}
+.contact-email {
+  font-size: 95%;
+  padding-bottom: 20px;
+}
+.contact-address {
+  font-size: 90%;
+}
+.icon {
+  height: 15px;
+  margin-right: 5px;
+}
+.show-photo {
+  margin-top: 185px;
+  background-color: rgba(55, 58, 60, 0.1);
+  color: white;
+  -webkit-transition: color 1s 1s, background-color 1s 1s, margin-top 1s, background-image 2s;
+  transition: color 1s 1s, background-color 1s 1s, margin-top 1s, background-image 2s;
+}
+.show-details {
+  margin-top: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  background-image: url(https://d30y9cdsu7xlg0.cloudfront.net/png/648377-200.png);
+  -webkit-transition: background-color 1s, margin-top 1s 1s, background-image 2s;
+  transition: background-color 1s, margin-top 1s 1s, background-image 2s;
+  background-repeat: no-repeat;
+  background-position: 97% 1%;
+  background-size: 5%;
+}
+footer {
+  background-color: #5EA000;
+  text-align: center;
+  margin-top: 2em;
+}
+footer p {
+  padding-top: .5em;
+}
+footer a {
+  color: #F2F2F2;
+}
