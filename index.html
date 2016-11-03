@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>User Directory</title>
   <meta name="author" content="Sergio Gomez">
-  <meta name="description" content="Front End Challenge">
+  <meta name="description" content="Angular & Boostrap User Directory">
   <link rel="icon" type="image/png" href="img/giocodes.png" />
   <style>
   @import url('https://fonts.googleapis.com/css?family=Playfair+Display');
@@ -40,17 +40,17 @@
         <!-- INFO class allows the overflow and animation effect -->
         <div class="{{user.expand ? 'info show-details' : 'info show-photo' }}">
           <!-- SHOW icon if phone number exists -->
-          <img class="has-phone" src="img/has-phone.svg" data-ng-show="user.phone !== '' && !user.expand" alt="">
+          <img class="has-phone" src="img/has-phone.svg" data-ng-show="user.phone !== '' && !user.expand" alt="user has phone number">
           <p class="contact-name"><strong>{{user.name | limitTo: 20}}</strong></p>
           <p class="contact-email">{{user.email}}</p>
-          <p><img class="icon" src="img/profile.svg" alt="">{{user.username}}</p>
-          <p><img class="icon" src="img/geo.svg" alt="">{{user.address.street}} {{user.address.suite}} </p>
+          <p><img class="icon" src="img/profile.svg" alt="profile icon">{{user.username}}</p>
+          <p><img class="icon" src="img/geo.svg" alt="address icon">{{user.address.street}} {{user.address.suite}} </p>
           <p class="contact-address">{{user.address.city}} {{user.address.zipcode}}
           </p>
           <!-- SHOW this p only if phone number exists -->
-          <p data-ng-show="user.phone !== ''"><img class="icon" src="img/phone.svg" alt="">{{user.phone}}</p>
+          <p data-ng-show="user.phone !== ''"><img class="icon" src="img/phone.svg" alt="phone icon">{{user.phone}}</p>
           <a href="http://{{user.website}}" target="blank">
-            <p><img class="icon" src="img/web.svg" alt="">{{user.website == "" ? 'N/A' : user.website}}</p>
+            <p><img class="icon" src="img/web.svg" alt="website icon">{{user.website == "" ? 'N/A' : user.website}}</p>
           </a>
         </div>
       </div>

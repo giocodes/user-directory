@@ -21,11 +21,10 @@ LESS
 ###Mobile
 ![Mobile Wireframe](https://giocodes.github.io/user-directory/screenshots/wireframe-mobile.jpg "Mobile Wireframe")
 
-2. Review data source (JSON) and analyze how to integrate
-3. Decided to use Angular's $http service to load the JSON
-4. Worked on the logic of how to toggle the contact details
-5. and CSS animation
-6. Finally the fun part: Theme and styling, used LESS to leverage variables and DRY the stylesheet.
+2. Review data source (JSON) and analyze how to integrate. Decided to use Angular's $http service to load the JSON
+3. Worked on the logic of how to toggle the contact details and CSS animation
+4. Theme and styling, used LESS to leverage variables and DRY the stylesheet.
+5. Testing and Deployment.
 
 ## Live Demo
 [https://giocodes.github.io/user-directory/](https://giocodes.github.io/user-directory/)
